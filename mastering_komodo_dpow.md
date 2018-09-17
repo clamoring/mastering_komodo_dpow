@@ -2,23 +2,21 @@
 
 ## by Duke Leto
 
-This is a short technical document aimed at developers who are interested to learn
+This is a short technical document aimed at developers who are interested in learning
 more about DPoW and/or want to add it to their a cryptocoin to protect
-against consensus (51%) attacks. These attacks are becoming very common
-against coins from large to small.
+against consensus (aka 51%) attacks. These attacks are becoming more and more popular against coins of all sizes.
 
-This book assumes basic knowledge of the Bitcoin protocol, Bitcoin source code,
-C++ and basic compiler knowledge. No prior knowledge of Komodo is assumed, this
-work contains a basic introduction of Komodo features.
+This book assumes basic knowledge of the Bitcoin (BTC) protocol, Bitcoin source code,
+C++, and basic compiler knowledge. It does not assume knowledge of Komodo-specific features but does explain pertinent technologies.
 
 # High Level Overview of DPoW
 
-DPoW sends blockhash data from your coin, to KMD, which is then sent to Bitcoin,
-providing a small coin with a small hashrate the security of BTC hashrate. This
+DPoW sends blockhash data from your coin to Komodo (KMD) which is then sent to Bitcoin.
+This provides the security of BTC hashrate. This
 data is embedded in OP\_RETURN metadata which Komodo Notary Nodes continuosly
-send. Notary nodes run full nodes of Bitcoin, Komodo, and all Komodo Asset chains
-and coins protected by KMD DPoW, and are the way data from one chain makes it onto
-another chain. The author of this document helps run the [ChainStrike notary node](https://komodostats.com/node.php?id=16).
+send. Notary nodes run full nodes of Bitcoin, Komodo, all Komodo Asset chains,
+and coins protected by KMD DPoW. This is the way data from one chain makes it onto
+another chain.
 
 
 ## Global Notary Node Network
